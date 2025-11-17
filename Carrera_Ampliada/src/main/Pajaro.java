@@ -31,8 +31,8 @@ public class Pajaro extends Animal {
 			}
 		}
 	}
-	//Esta parte la dejo comentada porque es un lio
 	
+	//Esta parte la dejo comentada porque es un lio
 	public void volar() { //Decidir si el pajaro camina o vuela, y en que direccion
 		int volarRandom = (int) (Math.random()*10 + 1);
 		if (volarRandom > 7) {
@@ -114,4 +114,5 @@ public class Pajaro extends Animal {
 		}
 	}
 }
+
 
