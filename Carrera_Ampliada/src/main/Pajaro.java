@@ -5,8 +5,8 @@ public class Pajaro extends Animal {
 	private int avanza = 0;
 	private boolean volando = false;
 	
-	public Pajaro(String nombre) {
-		super(nombre);
+	public Pajaro(String nombre, Thread viento) {
+		super(nombre, viento);
 	}
 
 	public int getAvanza() {
@@ -47,7 +47,7 @@ public class Pajaro extends Animal {
 	}
 	
 	public boolean volandoConViento() {
-		return (volando == true && Animal.isHayViento() == true);
+		return (volando == true && Viento.isHayViento() == true);
 	}
 	
 	public void pajaroVolando() {

@@ -2,10 +2,12 @@ package main;
 
 public abstract class Animal {
 	protected  String nombre;
+	protected Thread viento;
 
-	public Animal(String nombre) {
+	public Animal(String nombre, Thread viento) {
 		super();
 		this.nombre = nombre;
+		this.viento = viento;
 	}
 	
 	public void setNombre(String nombre) {
@@ -18,9 +20,4 @@ public abstract class Animal {
 	}
 
 	protected abstract int getAvanza();
-
-
-	public static boolean isHayViento() {
-		return Viento.isHayViento();
-	}
 }

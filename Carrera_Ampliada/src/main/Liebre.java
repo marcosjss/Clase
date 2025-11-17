@@ -7,8 +7,8 @@ public class Liebre extends Animal{
 	int liebreVaga = 0;
 	int segundosQuieta;
 	
-	public Liebre(String nombre) {
-		super(nombre);
+	public Liebre(String nombre, Thread viento) {
+		super(nombre, viento);	
 	}
 	
 	
@@ -18,7 +18,7 @@ public class Liebre extends Animal{
 	
 	@Override
 	public void avanzar() {
-		if (Animal.isHayViento() == true && liebreVaga == 4) {
+		if (Viento.isHayViento() == true && liebreVaga == 4) {
 			liebreVaga = 0;
 			System.out.println("¡La liebre " + nombre + " se desperto gracias al viento!");
         	liebreAvanza();
@@ -46,4 +46,3 @@ public class Liebre extends Animal{
 	}
 }
 	
-

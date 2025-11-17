@@ -14,7 +14,6 @@ public class Carrera implements Runnable{
 	@Override
 	public void run() {
 		for (int k = 0; k < 300; k++) {
-			Viento.iniciarViento();
 			animal.avanzar();
 			
 			if (animal.getAvanza() >= 300) {

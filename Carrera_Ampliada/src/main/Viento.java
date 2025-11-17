@@ -1,11 +1,10 @@
 package main;
 
-public class Viento {
+public class Viento implements Runnable{
 	
 private static boolean hayViento = false;
-private static boolean turno = false;
 
-	public static void iniciarViento() {
+	public void iniciarViento() {
 		int vientoRandom = (int) (Math.random()*10 + 1);
 		if (vientoRandom >= 8) {
 			hayViento = true;
@@ -16,11 +15,21 @@ private static boolean turno = false;
 		}
 	}
 	
-	public static void resetearViento() {
-		turno = true;
+	public static synchronized boolean isHayViento() {
+		return hayViento;
 	}
 
-	public static boolean isHayViento() {
-		return hayViento;
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while (true) {
+			iniciarViento();
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 }
