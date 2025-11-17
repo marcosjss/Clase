@@ -7,8 +7,8 @@ public class Liebre extends Animal{
 	int liebreVaga = 0;
 	int segundosQuieta;
 	
-	public Liebre(String nombre, Thread viento) {
-		super(nombre, viento);	
+	public Liebre(String nombre) {
+		super(nombre);
 	}
 	
 	
@@ -18,31 +18,22 @@ public class Liebre extends Animal{
 	
 	@Override
 	public void avanzar() {
-		if (Viento.isHayViento() == true && liebreVaga == 4) {
-			liebreVaga = 0;
-			System.out.println("¡La liebre " + nombre + " se desperto gracias al viento!");
-        	liebreAvanza();
-			
-		} else {
-			if (liebreVaga != 4) {
-	            	liebreAvanza();
-	    			
-			}	else if (liebreVaga == 4) {
-					System.out.println("¡La liebre " + nombre + " se ha dormido y no avanzara hasta dentro de " + segundosQuieta + " segundos!");
-					segundosQuieta --;
-					
-					if (segundosQuieta == 0) {
-						liebreVaga = 0;
-					}
-			}
-		}	
-	}
-	
-	public void liebreAvanza() {
-    	this.avanza = this.avanza + this.velocidad;
-		System.out.println("La liebre " + nombre + " ha avanzando " + this.avanza + " metros, se dormira en " + (4 - liebreVaga) + " segundos");
-		liebreVaga ++;
-		segundosQuieta = 10;
+		if (liebreVaga != 4) {
+            	this.avanza = this.avanza + this.velocidad;
+    			System.out.println("La liebre " + nombre + " ha avanzando " + this.avanza + " metros");
+    			liebreVaga ++;
+    			segundosQuieta = 10;
+    			
+		}	else if (liebreVaga == 4) {
+				System.out.println("La liebre " + nombre + " se ha dormido y no avanzara hasta dentro de " + segundosQuieta + " segundos");
+				segundosQuieta --;
+				
+				if (segundosQuieta == 0) {
+					liebreVaga = 0;
+				}
+		}
+		
 	}
 }
 	
+
