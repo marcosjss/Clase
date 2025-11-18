@@ -1,4 +1,4 @@
-package main;
+package main; //Esto asi tal cual, cambiar el nombre de las variables y eso porfa
 
 public abstract class Animal {
 	protected  String nombre;
@@ -19,3 +19,4 @@ public abstract class Animal {
 
 		protected abstract int getAvanza();
 }
+
