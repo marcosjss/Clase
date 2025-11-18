@@ -37,7 +37,7 @@ public class Carrera implements Runnable{
 			}
 			
 			try {
-				Thread.sleep(200);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -47,3 +47,4 @@ public class Carrera implements Runnable{
 	
 
 }
+
