@@ -1,4 +1,4 @@
-package main;
+package main; //Esto como el ejercicio anterior
 
 public class Tortuga extends Animal {
 	private int velocidad = 2;
@@ -20,3 +20,4 @@ public class Tortuga extends Animal {
 		
 	}
 }
+
