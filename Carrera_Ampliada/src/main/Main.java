@@ -1,4 +1,4 @@
-package main;
+package main; //Esto asi tal cual
 
 public class Main {
 
@@ -14,5 +14,6 @@ public class Main {
 		pajaro.start();
 
 	}
+
 
 }
